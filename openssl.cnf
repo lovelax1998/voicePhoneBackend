@@ -1,0 +1,14 @@
+[req]
+default_bits = 4096
+prompt = no
+default_md = sha256
+distinguished_name = dn
+req_extensions = req_ext
+
+[dn]
+CN = 183.66.251.10   # 替换为你的 IP 地址
+[req_ext]
+subjectAltName = @alt_names
+
+[alt_names]
+IP.1 = 183.66.251.10 # 与 CN 一致
