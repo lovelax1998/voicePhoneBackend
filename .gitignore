@@ -1,0 +1,4 @@
+survey.db
+*.log
+nohup.out
+*.pyc
