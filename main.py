@@ -33,6 +33,14 @@ def create_database():
             region TEXT
         )
     ''')
+    # Add new table for tracking uploads
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS uploads (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            sentence TEXT NOT NULL,
+            upload_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
     conn.commit()
     conn.close()
 
@@ -45,35 +53,39 @@ async def redirect_to_index():
 
 @app.post("/upload/")
 async def upload_file(
-    file: UploadFile = File(...),  # 文件参数
-    info: str = Form(...)          # 额外的 info 参数
+    file: UploadFile = File(...),
+    info: str = Form(...)
 ):
-    print("test")
     try:
-        # 解析 info 参数
         info_data = json.loads(info)
-        uid = info_data.get("uid")  # 获取 uid
+        uid = info_data.get("uid")
+        sentence = info_data.get("text")  # Get the sentence text from info
 
-        # 检查 uid 是否存在
         if not uid:
             raise HTTPException(
                 status_code=400,
                 detail="UID is required"
             )
 
-        # 定义保存路径
+        # Save file to disk (existing code)
         save_path = f"/var/data/sound/{uid}"
         object_name = f"{int(time.time())}_{file.filename}"
         file_path = os.path.join(save_path, object_name)
-
-        # 如果目录不存在，则创建
         os.makedirs(save_path, exist_ok=True)
-
-        # 保存文件
+        
         with open(file_path, "wb") as buffer:
             shutil.copyfileobj(file.file, buffer)
 
-        # 返回响应，包含文件名和 uid
+        # Record the upload in database
+        conn = sqlite3.connect(DATABASE_FILE)
+        cursor = conn.cursor()
+        cursor.execute('''
+            INSERT INTO uploads (sentence)
+            VALUES (?)
+        ''', (sentence,))
+        conn.commit()
+        conn.close()
+
         return {
             "filename": file.filename,
             "uid": uid,
@@ -159,6 +171,34 @@ async def submit_survey(
 
     # 返回生成的UID
     return {"uid": uid}
+
+@app.get("/get_upload_list")
+async def get_upload_list():
+    """
+    Returns a list of all uploaded sentences from all users
+    """
+    try:
+        conn = sqlite3.connect(DATABASE_FILE)
+        cursor = conn.cursor()
+        
+        # Get distinct sentences to avoid duplicates
+        cursor.execute('''
+            SELECT DISTINCT sentence FROM uploads
+        ''')
+        
+        sentences = [row[0] for row in cursor.fetchall()]
+        conn.close()
+        
+        return JSONResponse(
+            status_code=200,
+            content={"data": sentences}
+        )
+        
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error retrieving upload list: {str(e)}"
+        )
 
 if __name__ == "__main__":
     import uvicorn
