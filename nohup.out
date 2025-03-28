@@ -1,0 +1,107 @@
+INFO:     Started server process [3095115]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+test
+INFO:     14.104.135.30:9631 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3095115]
+INFO:     Started server process [3102190]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     14.104.135.30:10609 - "OPTIONS /upload HTTP/1.1" 307 Temporary Redirect
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3102190]
+INFO:     Started server process [3105846]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+test
+INFO:     14.104.135.30:9643 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3105846]
+INFO:     Started server process [3110167]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     14.104.135.30:9458 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.135.30:9458 - "GET /assets/index-tJWyhDOw.js HTTP/1.1" 200 OK
+INFO:     14.104.135.30:10919 - "GET /assets/index-ChZ3NTQC.css HTTP/1.1" 200 OK
+INFO:     14.104.135.30:10094 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.135.30:10094 - "GET /assets/index-tJWyhDOw.js HTTP/1.1" 200 OK
+INFO:     14.104.135.30:10097 - "GET /assets/index-ChZ3NTQC.css HTTP/1.1" 200 OK
+INFO:     14.104.135.30:10094 - "GET /logo.png HTTP/1.1" 404 Not Found
+INFO:     223.113.128.228:49530 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     140.179.7.43:55412 - "GET / HTTP/1.1" 200 OK
+INFO:     140.179.7.43:55424 - "GET /./logo.png HTTP/1.1" 404 Not Found
+INFO:     140.179.7.43:55430 - "GET /assets/index-tJWyhDOw.js HTTP/1.1" 200 OK
+INFO:     140.179.7.43:55438 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     140.179.7.43:55452 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     222.181.15.12:32398 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     222.181.15.12:19512 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     222.181.15.12:22366 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     14.104.133.92:8608 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8608 - "GET /assets/index-tJWyhDOw.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8612 - "GET /assets/index-ChZ3NTQC.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8608 - "GET /logo.png HTTP/1.1" 404 Not Found
+INFO:     14.104.133.92:8805 - "POST /upload HTTP/1.1" 307 Temporary Redirect
+test
+INFO:     14.104.133.92:8805 - "POST /upload/ HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7691 - "GET /assets/index-ChZ3NTQC.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:9103 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:9103 - "GET /assets/index-CO6g7kBv.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:9106 - "GET /assets/index-DxyR7oSL.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7940 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7940 - "GET /assets/index-CO6g7kBv.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7943 - "GET /assets/index-DxyR7oSL.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8869 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8869 - "GET /assets/index-CO6g7kBv.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8871 - "GET /assets/index-DxyR7oSL.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8869 - "GET /logo.png HTTP/1.1" 404 Not Found
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3110167]
+INFO:     Started server process [3722222]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     14.104.133.92:8208 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8208 - "GET /assets/index-CO6g7kBv.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8210 - "GET /assets/index-DxyR7oSL.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:8623 - "GET /assets/index-DxyR7oSL.css HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7215 - "GET / HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7215 - "GET /assets/index-BF2VdZGi.js HTTP/1.1" 200 OK
+INFO:     14.104.133.92:7229 - "GET /assets/index-DD0gqwuh.css HTTP/1.1" 200 OK
+INFO:     Started server process [5373]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 8080): address already in use
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Started server process [7433]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     Started server process [11353]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53183 - "GET /login HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53183 - "GET /login/ HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:53183 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53246 - "OPTIONS /login HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:53260 - "GET /login HTTP/1.1" 307 Temporary Redirect
+INFO:     127.0.0.1:53260 - "GET /login/ HTTP/1.1" 405 Method Not Allowed
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [11353]
